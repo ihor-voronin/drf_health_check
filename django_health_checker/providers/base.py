@@ -7,8 +7,6 @@ log = logging.getLogger(__name__)
 
 
 class HealthCheckProvider:
-    name: str
-
     HEALTH_UP = "UP"
     HEALTH_DOWN = "DOWN"
 
@@ -22,7 +20,7 @@ class HealthCheckProvider:
     def _restricted_health_checks_classes(cls) -> Set[Type["HealthCheckProvider"]]:
         available_health_checkers = set()
         for health_checker in cls.__subclasses__():
-            if health_checker.name in settings.get_provider_names():
+            if health_checker.__name__ in settings.get_provider_names():
                 available_health_checkers.add(health_checker)
         return available_health_checkers
 

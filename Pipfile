@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 drf-spectacular = "*"
+django = "*"
+djangorestframework = "*"
 
 [dev-packages]
 isort = "*"

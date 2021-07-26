@@ -21,7 +21,7 @@ class Settings:
 
         cls.__debug = cls._get_from_django_settings(django_settings, "DEBUG", False)
         cls.__provider_names = cls._get_from_django_settings(
-            django_settings, "HEALTH_CHECKER_PROVIDERS", set()
+            django_settings, "HEALTH_CHECK_PROVIDERS", set()
         )
 
     @classmethod

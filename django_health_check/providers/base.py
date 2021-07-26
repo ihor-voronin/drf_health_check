@@ -1,7 +1,7 @@
 import logging
 from typing import Set, Type
 
-from django_health_checker.settings import settings
+from django_health_check.settings import settings
 
 log = logging.getLogger(__name__)
 

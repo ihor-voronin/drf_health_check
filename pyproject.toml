@@ -3,7 +3,7 @@ requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "django_health_check"
+module = "django_health_check_view"
 author = "Ihor Voronin"
 author-email = "VoroninIhor@gmail.com"
 home-page = "https://github.com/ihor-voronin/health-checker-django"

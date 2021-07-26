@@ -8,3 +8,4 @@ class HealthChecker(AppConfig):
 
     def ready(self) -> None:
         settings.build_settings()
+        from . import providers

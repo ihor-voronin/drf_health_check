@@ -7,10 +7,11 @@ module = "django_health_checker"
 author = "Ihor Voronin"
 author-email = "VoroninIhor@gmail.com"
 home-page = "https://github.com/ihor-voronin/health-checker-django"
+classifiers = [ "License :: OSI Approved :: MIT License",]
+description-file = "README.md"
 requires = [
     "drf-spectacular>=0.17.2",
     "django>=3.2",
     "djangorestframework>=3.10.0",
 ]
 requires-python = ">=3.9"
-description-file="README.md"

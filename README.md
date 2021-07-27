@@ -30,9 +30,7 @@ HEALTH_CHECK_PROVIDERS = {
 Add `drf_health_check` to `INSTALLED_APPS` 
 ```
 INSTALLED_APPS = [
-    "drf_spectacular",
-    "django_auth_adfs",
-    "corsheaders",
+    ...
     "drf_health_check",
 ]
 ```

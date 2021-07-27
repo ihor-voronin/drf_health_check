@@ -2,6 +2,7 @@ __all__ = ["settings"]
 
 from typing import Any, ClassVar, Optional, Set
 
+from django.conf import settings as django_settings
 from django.utils.module_loading import import_string
 
 from .providers import HealthCheckProvider
@@ -20,8 +21,6 @@ class Settings:
 
     @classmethod
     def build_settings(cls) -> None:
-        from django.conf import settings as django_settings
-
         provider_names = set(
             cls._get_from_django_settings(
                 django_settings, "HEALTH_CHECK_PROVIDERS", set()

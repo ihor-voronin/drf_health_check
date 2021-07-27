@@ -5,7 +5,7 @@ from drf_spectacular.utils import extend_schema
 from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 
-from .providers import HealthCheckProvider
+from .health_status import HealthChecker
 from .serializers import AnnotateHealthSerializer
 
 
@@ -14,4 +14,4 @@ class HealthView(APIView):
 
     @extend_schema(request=None, responses=AnnotateHealthSerializer())
     def get(self, request: HttpRequest, *args: Any, **kwargs: Any) -> JsonResponse:
-        return JsonResponse({"status": HealthCheckProvider.get_health_status()})
+        return JsonResponse({"status": HealthChecker.get_health_status()})

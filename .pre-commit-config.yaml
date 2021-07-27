@@ -14,7 +14,7 @@ repos:
     hooks:
       - id: mypy
         language: system
-        entry: bash -c "PYTHONPATH=$(pwd)/django_json_logging:$PYTHONPATH pipenv run mypy django_health_checker"
+        entry: bash -c "PYTHONPATH=$(pwd)/django_json_logging:$PYTHONPATH pipenv run mypy drf_health_check"
         pass_filenames: false
         verbose: true
         types: [ "python" ]
